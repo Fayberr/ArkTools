@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a problem in ArkTools
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Fill in what you can — rough info is better than nothing. Screenshots are very welcome.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked
+      options:
+        - label: I searched existing issues and didn't find this one.
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: ArkTools version
+      placeholder: "Example: 3.5.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: What mode and settings were you using?
+      placeholder: |
+        Simple mode, left mouse, toggle, 50 CPS
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the app
+        2. Switch to Advanced mode
+        3. Set speed to 100 CPS
+        4. Start clicking
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Anything else?
+      description: Screenshots, logs, Windows version, recordings — anything helps.

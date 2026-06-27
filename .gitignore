@@ -1,0 +1,56 @@
+# -- Dependencies --
+node_modules/
+
+# -- Build output --
+dist/
+dist-ssr/
+src-tauri/target/
+/gen/schemas
+profile.json.gz
+
+# -- Environment --
+.env
+.env.*
+*.local
+
+# -- Tauri --
+.tauri
+*.key
+*.key.pub
+
+# -- IDE --
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# -- OS files --
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -- Logs --
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -- Misc local --
+.VSCodeCounter/
+*.csv
+.continue
+
+# -- Local UI test harness --
+test.html
+src/test-main.tsx
+src/TestBed.tsx
+src/tauri-mock-setup.ts
+vite.test.config.ts
+.claude/settings.local.json

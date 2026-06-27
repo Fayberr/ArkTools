@@ -1,0 +1,46 @@
+[package]
+name = "ArkTools"
+version = "1.5.7"
+description = "ArkTools - premade macro launcher for ARK."
+authors = ["Fayberr"]
+license = "GPL-3.0"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = ["tray-icon", "image-ico"] }
+windows-sys = { version = "0.61.2", features = ["Win32_Foundation", "Win32_UI_Input_KeyboardAndMouse", "Win32_UI_WindowsAndMessaging",
+  "Win32_System_Threading", "Win32_Security", "Win32_Graphics_Dwm", "Win32_Graphics_Gdi", "Win32_UI_HiDpi"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+serde = { version = "1.0", features = ["derive"] }
+reqwest = { version = "0.13.4", default-features = false, features = ["json", "native-tls", "blocking"] }
+tauri-plugin-opener = "2.0"
+tauri-plugin-log = "2.0"
+tauri-plugin-process = "2.3.1"
+tauri-plugin-store = "2"
+tauri-plugin-global-shortcut = "2"
+log = "0.4"
+serde_json = "1.0"
+raw-window-handle = "0.6.2"
+tauri-plugin-updater = { version = "2.10.0", default-features = false, features = ["native-tls"] }
+hmac = "0.13.0"
+sha2 = "0.11"
+hex = "0.4"
+dirs = "6.0.0"
+windows-targets = "0.53.5"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.56"
+
+[profile.release]
+strip = true
+lto = "thin"
+codegen-units = 1
+debug = false

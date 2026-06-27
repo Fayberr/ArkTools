@@ -1,0 +1,119 @@
+.macros-panel {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 0;
+  overflow-y: visible;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--accent-color, #22c55e);
+}
+
+.macros-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.macro-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.macro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 12px;
+}
+
+.macro-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+.macro-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.setting-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.setting-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+.settings-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.settings-input:focus {
+  border-color: var(--accent-color, #22c55e);
+}
+
+.number-input {
+  width: 100%;
+}
+
+.calibration-field {
+  grid-column: span 2;
+}
+
+.calibration-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calibrate-btn {
+  background: var(--accent-color, #22c55e);
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.calibrate-btn:hover {
+  opacity: 0.9;
+}
+
+.calibrate-btn.calibrating {
+  background: #f59e0b;
+}
+
+.position-coords {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: monospace;
+}

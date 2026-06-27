@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest an idea for ArkTools
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Tell us what you want and why.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked
+      options:
+        - label: I searched existing issues and didn't find a similar request.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's missing or inconvenient?
+      placeholder: I want to be able to ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: How would you like it to work?
+      placeholder: It would be great if ArkTools could ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What part of the app?
+      options:
+        - UI / UX
+        - Clicking engine
+        - Hotkeys
+        - Overlay
+        - Settings / Storage
+        - Installer / Updates
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Anything else?
+      description: Mockups, references, screenshots, workarounds you've tried.

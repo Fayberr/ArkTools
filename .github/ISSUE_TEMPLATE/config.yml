@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discord
+    url: https://discord.gg/jhWEW747x5
+    about: Ask questions, get help, or chat with the community.
+  - name: Windows SmartScreen / antivirus questions
+    url: https://github.com/Fayberr/ArkTools/blob/main/docs/windows-release-trust.md
+    about: Read about Windows installer signing and SmartScreen warnings before reporting a false positive.
+  - name: Search existing issues
+    url: https://github.com/Fayberr/ArkTools/issues?q=
+    about: Check if your issue has already been reported.
