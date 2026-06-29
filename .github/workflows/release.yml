@@ -56,13 +56,13 @@ jobs:
           releaseDraft: true
 
       - name: Update release body from changelog
-         shell: pwsh
-         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         run: |
-           if (Test-Path release_body.md) {
-             gh release edit "${{ github.ref_name }}" --notes-file release_body.md
-           }
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if (Test-Path release_body.md) {
+            gh release edit "${{ github.ref_name }}" --notes-file release_body.md
+          }
 
       - name: Create portable zip
         shell: pwsh
